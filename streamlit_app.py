@@ -71,7 +71,9 @@ query1 = f"""
 SELECT
     GENDER, 
     GUNDAM_NAME, 
+    GRADE,
     COUNT(GENDER) AS visitor
+
 FROM 
     TP6_tumbling
 WHERE 
