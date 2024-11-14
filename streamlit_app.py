@@ -173,13 +173,13 @@ with col4:
     # Add traces for each gender
     for gender in result['GENDER'].unique():
         gender_data = result[result['GENDER'] == gender]
-        fig2.add_trace(go.Bar(
+        fig2.add_trace(go.Scatter(
             x=gender_data['TimePeriod'], 
             y=gender_data['TOTAL_VIEW'],
             name=gender,
             text=gender_data['TOTAL_VIEW'],
-            textposition='outside',
-            marker=dict(color=gender_color_map[gender]),  # Apply color map
+            textposition='top center',  # Modify the text position for lines
+            line=dict(color=gender_color_map[gender]),  # Apply color map
             hoverinfo='x+y',
         ))
 
@@ -191,7 +191,6 @@ with col4:
         yaxis_title="Number of Visitors", 
         xaxis=dict(showgrid=False),       
         yaxis=dict(showgrid=False),
-        barmode='stack', 
         hovermode='closest'
     )
 
