@@ -107,8 +107,6 @@ with col3:
             x=gender_data['visitor'],  # Total Visits on the x-axis
             y=gender_data['GUNDAM_NAME'],  # Gundam Name on the y-axis
             name=gender,
-            text=gender_data['visitor'],
-            textposition='outside',  # Position the text outside the bars
             marker=dict(color=gender_color_map[gender]),  # Apply color map
             hoverinfo='x+y',
             orientation='h'  # Set bar chart orientation to horizontal
