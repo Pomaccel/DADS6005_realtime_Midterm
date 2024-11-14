@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 import time
-# Code OK
+# 
 
 st.set_page_config(page_title="Gundam Views Dashboard", layout="wide")
 st.image("Cover2.jpg", use_container_width=True)
