@@ -81,7 +81,7 @@ GROUP BY
     GUNDAM_NAME
 ORDER BY 
     visitor DESC
-LIMIT 1000;
+LIMIT 1000000000;
 """
 curs.execute(query1)
 df1 = pd.DataFrame(curs, columns=[item[0] for item in curs.description])
@@ -140,7 +140,7 @@ WHERE
     GRADE IN ({grade_filter}) AND GENDER IN ({gender_filter})
 GROUP BY
     GENDER, WINDOW_START_STR, WINDOW_END_STR
-LIMIT 1000;
+LIMIT 1000000000;
 """
 curs.execute(query2)
 df2 = pd.DataFrame(curs, columns=[item[0] for item in curs.description])
@@ -184,7 +184,7 @@ with col4:
 
     # Update the layout
     fig2.update_layout(
-        title="Tracking Total Visitor Every 1 Minute by Gender", 
+        title="Tracking Total Visitor Every 5 minutes, advancing every minute by Gender", 
         plot_bgcolor='rgba(0, 0, 0, 0)', 
         xaxis_title="Time Period", 
         yaxis_title="Number of Visitors", 
@@ -213,7 +213,7 @@ WHERE GRADE IN ({grade_filter}) AND GENDER IN ({gender_filter})
 GROUP BY
     GRADE, GENDER
 
-LIMIT 5000;
+LIMIT 1000000000;
 """
 curs.execute(query3)
 df_summary3 = pd.DataFrame(curs, columns=[item[0] for item in curs.description])
@@ -241,7 +241,7 @@ with col5:
 
     # Update the layout
     fig3.update_layout(
-        title="Number of Visits Every 5 Minute by GUNDAM Grade", 
+        title="Number of Visits Every 5 minutes, advancing every minute by GUNDAM Grade", 
         plot_bgcolor='rgba(0, 0, 0, 0)', 
         xaxis_title="Time Period", 
         yaxis_title=None, 
@@ -265,7 +265,7 @@ FROM
 WHERE GRADE IN ({grade_filter}) AND GENDER IN ({gender_filter})
 GROUP BY 
     GENDER
-LIMIT 100;
+LIMIT 1000000000;
 """
 
 curs.execute(query4)
