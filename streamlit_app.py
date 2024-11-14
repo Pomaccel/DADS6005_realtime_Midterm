@@ -71,18 +71,19 @@ query1 = f"""
 SELECT
     GENDER, 
     GUNDAM_NAME, 
-    GRADE,
+    GRADE, 
     COUNT(GENDER) AS visitor
-
 FROM 
     TP6_tumbling
 WHERE 
     GRADE IN ({grade_filter}) AND GENDER IN ({gender_filter})
 GROUP BY 
     GENDER, 
-    GUNDAM_NAME
+    GUNDAM_NAME,
+    GRADE
 ORDER BY 
     visitor DESC
+
 LIMIT 1000000000;
 """
 curs.execute(query1)
