@@ -1,9 +1,5 @@
 streamlit
-plotly.express
+plotly
 pinotdb
 pytz
-plotly.express
-plotly.graph_objects
 pandas
-datetime 
-time
