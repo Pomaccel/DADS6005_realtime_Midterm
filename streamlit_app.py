@@ -66,7 +66,7 @@ gender_color_map = {
 }
 
 
-# Query 1: Top 10 Gundam Popular
+# Query 1:  Gundam Views by Name
 query1 = f"""
 SELECT
     GENDER, 
@@ -300,11 +300,10 @@ with col6:
         yaxis=dict(showgrid=False),
         hovermode='closest'  
     )
-    st.header("⚧ Gender Type by Grade")
+    st.header("⚧ Averavge Session by Gender ")
     st.plotly_chart(fig4, use_container_width=True)
 
 
- 
  # Footer message
 st.markdown("---")  # This adds a horizontal line
 st.markdown(
