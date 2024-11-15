@@ -293,7 +293,7 @@ with col6:
 
     # Update the layout
     fig4.update_layout(
-        title="Session Length vs Total Visitors by Gender", 
+        title="Average Session Length vs Total Visitors by Gender", 
         plot_bgcolor='rgba(0, 0, 0, 0)', 
         xaxis_title="Time Period", 
         yaxis_title="Average Session Length (min)", 
