@@ -303,8 +303,18 @@ with col6:
     st.header("⚧ Gender Type by Grade")
     st.plotly_chart(fig4, use_container_width=True)
 
+
+ 
+ # Footer message
+st.markdown("---")  # This adds a horizontal line
+st.markdown(
+    "<div style='text-align: center; font-size: 12px; color: gray;'>Created by Bunrawat Charoenyuennan 6610422013</div>",
+    unsafe_allow_html=True
+)   
+
 #--------------------------------------------------------------------------------
 # Refresh logic
 if auto_refresh:
     time.sleep(refresh_rate)
     st.rerun()
+
