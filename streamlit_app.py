@@ -308,7 +308,7 @@ with col6:
  # Footer message
 st.markdown("---")  # This adds a horizontal line
 st.markdown(
-    "<div style='text-align: center; font-size: 12px; color: gray;'>Created by Bunrawat Charoenyuennan 6610422013</div>",
+    "<div style='text-align: center; font-size: 20px; color: gray;'>Created by Bunrawat Charoenyuennan 6610422013</div>",
     unsafe_allow_html=True
 )   
 
