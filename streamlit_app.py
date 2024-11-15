@@ -3,7 +3,7 @@ import streamlit as st
 from pinotdb import connect
 import plotly.express as px
 import plotly.graph_objects as go
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 # 
 
@@ -16,9 +16,10 @@ st.write("Explore the data visualizations below to see insights on Mobile Suit G
 conn = connect(host='54.255.188.63', port=8099, path='/query/sql', schema='http')
 
 # Display last update time
-now = datetime.now()
-dt_string = now.strftime("%d %B %Y %H:%M:%S")
-st.write(f"Lasted update: {dt_string}")
+now_utc = datetime.now()
+now_utc_plus_7 = now_utc + timedelta(hours=7)
+dt_string = now_utc_plus_7.strftime("%d %B %Y %H:%M:%S")
+st.write(f"Last update: {dt_string}")
 
 # Set up auto-refresh options
 if "sleep_time" not in st.session_state:
