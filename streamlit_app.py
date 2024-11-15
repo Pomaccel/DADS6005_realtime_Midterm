@@ -301,7 +301,7 @@ with col6:
         yaxis=dict(showgrid=False),
         hovermode='closest'  
     )
-    st.header("⚧ Averavge Session by Gender ")
+    st.header("⚧ Average Session by Gender ")
     st.plotly_chart(fig4, use_container_width=True)
 
 
